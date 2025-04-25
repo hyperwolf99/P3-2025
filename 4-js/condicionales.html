@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Condicionales</title>
+</head>
+
+<body>
+    <script>
+        let a = '6'
+
+        // && AND
+        // || OR
+        if (a == 6) { // se debe usar === para diferenciar entre string y num
+            console.log("es 6")
+        } else {
+            console.log("no es 6")
+        }
+
+        console.log(a == 6 ? 'es 6' : 'no es 6') // se debe usar === para diferenciar entre string y num
+
+        switch (a) {
+            case 6: // switch si diferencia entre tipos
+                console.log('es 6')
+                break
+            default:
+                console.log('no es 6')
+        }
+
+        console.log(null == undefined) // == Compara el valor
+        console.log(null === undefined) // === Compara el valor y el tipo
+
+        console.log('' == '0') // false
+        console.log('' == 0) // false
+        console.log('0'== 0)  // true
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funciones</title>
+</head>
+
+<body>
+    <script>
+        console.log(suma(1, 1)) //Lo suma
+
+        // Funcion comun
+        function suma(a, b) {
+            return a + b;
+        }
+
+        console.log(suma(1, '2')) //Lo concatena
+
+        // Funcion como variable
+        const suma2 = function nuevaFuncion(a, b) {
+            return a + b
+        }
+        console.log(suma2(2, 2))
+
+        // Funciones anonimas
+        const suma3 = function (a, b) {
+            return a + b
+        }
+        console.log(suma3(3, 3))
+
+        // Funcion flecha
+        const suma4 = (a, b) => {
+            return a + b
+        }
+        console.log(suma4(4, 4))
+
+        //Funcion flecha de una sola linea
+        const suma5 = (a, b) => a + b
+        console.log(suma5(5, 5))
+    </script>
+</body>
+
+</html>

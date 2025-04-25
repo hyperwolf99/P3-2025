@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funciones, var, let</title>
+</head>
+
+<body>
+    <script>
+        // Var: Crea una variable que se puede cambiar y vive dentro de la función (o de todo el código si no está dentro de una función).
+        function rango(a, b) {
+            for (var i = a; i < b; i++) {
+                console.log(i)
+            }
+            console.log('Fuera del bucle', i) // Sí lo muestra porque i vive en toda la función
+        }
+        console.log(i)// Error porque i no existe fuera de la función
+        rango(1, 3)
+
+        //Let: Sirve para crear una variable que se puede cambiar y solo vive dentro de un bloque.
+        function rango2(a, b) {
+            for (let i = a; i < b; i++) {
+                console.log(i)
+            }
+            console.log('Fuera del bucle', i)// Da error porque i solo existe dentro del for
+        }
+        rango(1, 3)
+    </script>
+</body>
+
+</html>
