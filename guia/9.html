@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function esPalindromo(palabra){
+            //Primero limpiamos la palabra
+            //trim quita espacios del inicio y del final y toLowerCase lo hace minusculas
+            //replaceAll quita los espacios intermedios
+            const palabraLimpia = palabra.trim().toLowerCase().replaceAll(' ', '')
+
+            //Invertimos la palabraLimpia
+            const invertido = palabraLimpia.split('').reverse().join('')
+
+            //Comparar para saber si es palindromo
+            if(palabraLimpia === invertido){
+                console.log(`La palabra ${palabraLimpia} si es palindromo`)
+            } else{
+                console.log(`La palabra ${palabraLimpia} no es palindromo`)
+            }
+        }
+
+        esPalindromo(' a  na   ')
+        esPalindromo(' cal  vito   ')
+    </script>
+</body>
+</html>

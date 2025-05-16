@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const estudiante = {
+            nombre:'Matias',
+            edad: 20,
+            cursos: ['matematicas','lengua', 'ingles'],
+        }
+
+        function mostrarInfoEstudiante(estudiante){
+            return `Nombre: ${estudiante.nombre}, Edad: ${estudiante.edad}, Cursos: ${estudiante.cursos.join(', ')}`
+        }
+
+        console.log(mostrarInfoEstudiante(estudiante))
+    </script>
+</body>
+</html>

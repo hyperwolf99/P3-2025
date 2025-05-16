@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Arreglo de objetos con las calificaciones
+        const calificaciones = [
+            {nombre: 'lengua', calificacion: 6},
+            {nombre: 'fisica', calificacion: 9},
+            {nombre: 'mate', calificacion: 8},
+            {nombre: 'ingles', calificacion: 7}
+        ]
+
+        //Promedio
+        function promedioCalificaciones(calificaciones){
+            let suma = 0 //Variable suma que almacena las calificaciones
+
+            //Recorre y suma las calificaciones
+            for (const nota of calificaciones){
+                suma = suma + nota.calificacion
+            }
+            return 'El promedio es ' +suma/calificaciones.length
+        }
+
+        console.log(promedioCalificaciones(calificaciones))
+    </script>
+</body>
+</html>

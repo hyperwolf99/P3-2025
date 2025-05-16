@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function contarPares(arreglo){
+            let contador = 0
+
+            //Por si quiero ver los pares
+            const pares = []
+
+            for (numero of arreglo){
+                if (numero % 2 == 0){
+                    contador = contador + 1
+                    //pares
+                    pares.push(numero)
+                } else{ //No hace falta el else
+                    console.log("No hay numeros pares")
+                }
+            }
+            return contador,pares
+        }
+
+        console.log(contarPares([1,2,3,4,5,6]))
+        console.log(contarPares([1,3,5,7,9,11]))
+    </script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // Ejercicio 1:
+        function sumarRango(inicio, fin) {
+            let suma = 0;
+
+            for (let i = inicio; i <= fin; i++) {
+                suma = suma + i
+            }
+
+            return suma;
+        }
+
+        console.log("El resultado es:", sumarRango(5, 10))
+
+        //Ejercicio 2:
+        function contarPares(arreglo) {
+            let contador = 0;
+
+            // opcional para ver los numeros pares
+            let pares = []
+
+            for (let numero of arreglo) {
+                if (numero % 2 === 0) {
+                    contador = contador + 1;
+                    // opcional
+                    pares.push(numero)
+                }
+            }
+
+            return contador, pares;
+        }
+
+        let numeros = [1, 2, 3, 4, 5, 6, 7];
+        console.log(contarPares(numeros));
+    </script>
+</body>
+
+</html>

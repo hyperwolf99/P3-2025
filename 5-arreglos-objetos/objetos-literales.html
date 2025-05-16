@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //Definir objeto
+        const objeto = {
+            //Propiedades
+            texto:'texto',
+            numero: 45,
+            'una propiedad':666,
+            //Metodos
+            sumar(a,b){ //Funcion comun
+                return a + b + this.numero //Usamos "this" para acceder a la propiedad numero desde dentro del objeto
+            },
+            restar: function (a,b){ //Funcion anonima
+                return a-b - this.numero //Usamos "this" para acceder a la propiedad numero desde dentro del objeto
+            },
+            multiplicar: (a,b)=>{ //Funcion flecha
+                return a * b //La funcion "this" no funciona en las funciones flecha
+            },
+        }
+
+        //Muestra todo el objeto
+        console.log('Todo el objeto',objeto)
+
+        //Muestra el contenido de las propiedades
+        console.log('El contenido de texto es',objeto.texto)
+        console.log('El contenido de numero es',objeto.numero)
+        console.log('El contenido de "una propiedad" es',objeto['una propiedad'])
+
+        //Cambiamos el contenido de texto
+        objeto.texto = 'mensaje'
+        console.log('El contenido de texto tras cambiarlo es',objeto.texto)
+
+        //Agregar propiedades al objeto
+        objeto.sumatoria = 36
+        console.log('Mostramos el objeto luego de agregar una propiedad',objeto)
+
+        //Metodos
+        console.log('El resultado de la suma es',objeto.sumar(2,6))
+        console.log('El resultado de la resta es',objeto.restar(4,2))
+        console.log('El resultado de la multiplicacion es',objeto.multiplicar(5,5))
+
+        //undefined
+        console.log(objeto.abc) //propiedad undefined
+        console.log(objeto["abc"]) //propiedad undefined
+        console.log(asd) //variable que no existe
+
+        //Borrar propiedad
+        delete objeto.sumatoria
+    </script>
+</body>
+
+</html>

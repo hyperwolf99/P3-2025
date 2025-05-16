@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modificar DOM</title>
+    <style type="text/CSS">
+        .negrita{
+            font-weight: bold;
+        }
+        .verde{
+            color:green
+        }
+        .fondo{
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="Enc">Encabezado</h1>
+    <p id="texto">Un parrafo</p>
+    <p id="texto2" class="verde negrita">Otro parrafo</p>
+    <a id="link" href="#">Enlace</a>
+    <script>
+        // Modificando el contenido del elemento
+        const encabezado = document.getElementById('Enc')
+        encabezado.innerText = 'Titulo modificado en JS' //Modifica el texto
+
+        const texto = document.getElementById('texto')
+        texto.innerHTML = '<b>hola</b> mundo' //Se usa innerHTML para interpretar HTML
+
+        // Leer/Modificar atributos del elemento
+        const link = document.getElementById('link')
+        console.log(link.getAttribute('href'))
+        link.setAttribute('href', 'https://google.com.ar')
+        // link.removeAttribute('href') // para quitar atributos
+
+        // Modificar estilos CSS
+        texto.style.color = 'red'
+
+        const texto2 = document.getElementById('texto2')
+        console.log(texto2.classList) //Muestra las clases que tiene asignada el id 'texto2'
+        console.log(texto2.classList.length) //Muestra la longitud
+
+        // Agregar clase
+        texto2.classList.add('fondo')
+
+        // Quitar clase
+        texto2.classList.remove('verde')
+
+        // Verifica si existe la clase 'fondo'
+        console.log(texto2.classList.contains('fondo'))
+
+        // Invertir clase
+        // (si no está la clase, la agrega)
+        // (si está la clase, la quita)
+        texto2.classList.toggle('verde') // Agrega la clase 'verde', la habiamos quitado antes
+        texto2.classList.toggle('fondo') // Quita la clase 'fondo'
+    </script>
+</body>
+</html>

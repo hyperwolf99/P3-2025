@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acceso a elementos DOM</title>
+</head>
+
+<body>
+    <h1 id="Enc">Encabezado</h1>
+    <p id="texto">Un parrafo</p>
+    <ul>
+        <li>uno</li>
+        <li>dos</li>
+        <li>tres</li>
+    </ul>
+    <ol id="lista">
+        <li class="item">a</li>
+        <li class="item">b</li>
+        <li class="item">c</li>
+        <li class="item" style="display: none;">d</li>
+    </ol>
+
+    <script>
+        // Acceso por ID
+        const encabezado = document.getElementById('Enc')
+        const texto = document.getElementById('texto')
+        console.log(encabezado.textContent)
+        console.log(texto.textContent)
+
+        // Acceso por nombre de etiqueta
+        const lis = document.getElementsByTagName('li') //Accede a todos los elementos li
+        console.log(lis.length) //Imprime la longitud
+        console.log(lis[0].textContent) //Imprime el texto del indice 0
+
+        // Acceso por clase
+        const el = document.getElementsByClassName('item') //Accede a todos los elementos con la clase item
+        console.log(el.length) //Imprime la longitud
+        console.log(el[0].textContent) //Imprime el texto del indice 0
+
+        // Acceso por selector CSS
+        const porElemento = document.querySelector('ul')
+        console.log(porElemento.innerHTML)
+
+        const porId = document.querySelector('#texto')
+        console.log(porId.textContent)
+
+        const porClase = document.querySelector('.item')
+        console.log(porClase.textContent)
+
+        // innerHTML vs innerText vs textContent
+        const lista = document.getElementById('lista')
+        console.log('innerHTML: ',lista.innerHTML) //Muestra el HTML dentro de la lista
+        console.log('innerText: ',lista.innerText) //Muestra el texto del HTML, teniendo en cuenta el CSS
+        console.log('textContent: ',lista.textContent) //Muestra todo el texto sin tener en cuenta el CSS
+    </script>
+</body>
+
+</html>
