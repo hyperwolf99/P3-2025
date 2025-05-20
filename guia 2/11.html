@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Ejercicio 11</title>
+</head>
+
+<body>
+    <h3>Cosas por Hacer (clic para eliminar):</h3>
+    <ul id="tareas">
+        <li>Comprar pan</li>
+        <li>Pasear al perro</li>
+        <li>Lavar los platos</li>
+        <li>Estudiar DOM</li>
+    </ul>
+
+    <script>
+        const tareas = document.getElementById('tareas')
+
+        tareas.addEventListener('click', (e)=>{
+            if(e.target.tagName == 'LI'){ //target.tagName devuelve el nombre del tag en mayusculas 'LI'
+                e.target.remove() //usamos e.target.remove() para eliminar el 'LI' clickeado
+            }
+        })
+    </script>
+</body>
+
+</html>

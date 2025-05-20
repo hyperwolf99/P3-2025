@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Ejercicio 8</title>
+    <style>
+    .oculto { display: none; }
+    </style>
+</head>
+
+<body>
+    <button id="toggleBoton">Mostrar/Ocultar Secreto</button>
+    <p id="secreto" class="oculto">¡Este es un mensaje secreto!</p>
+
+    <script>
+        const boton = document.getElementById('toggleBoton')
+        const secreto = document.getElementById('secreto')
+
+        boton.addEventListener('click', () => {
+            secreto.classList.toggle('oculto')
+        })
+    </script>
+</body>
+
+</html>

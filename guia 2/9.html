@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Ejercicio 9</title>
+</head>
+
+<body>
+    <label for="base">Base: </label>
+    <input type="number" id="base"><br>
+    <label for="altura">Altura: </label>
+    <input type="number" id="altura"><br>
+    <button id="perimetro">Calcular perimetro</button>
+    <button id="superficie">Calcular superficie</button>
+    <script>
+        const base = document.getElementById('base')
+        const altura = document.getElementById('altura')
+        const perimetro = document.getElementById('perimetro')
+        const superficie = document.getElementById('superficie')
+
+        perimetro.addEventListener('click', ()=>{
+            alert(`El perimetro es: ${(+base.value) + (+altura.value)}`)
+        })
+
+        superficie.addEventListener('click', ()=>{
+            alert(`La superficie es: ${(+base.value) * (+altura.value)}`)
+        })
+    </script>
+</body>
+
+</html>

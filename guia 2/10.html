@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Ejercicio 10</title>
+</head>
+
+<body>
+    <p id="texto">Texto que cambiara de color</p>
+    
+    <select name="" id="colorTexto">
+        <option value="black">Selecciona una opción</option>
+        <option value="red">Rojo</option>
+        <option value="blue">Azul</option>
+    </select>
+
+    <select name="" id="colorFondo">
+        <option value="white">Selecciona una opción</option>
+        <option value="orange">Naranja</option>
+        <option value="pink">Rosa</option>
+    </select>
+
+    <script>
+        const texto = document.getElementById('texto')
+        const colorTexto = document.getElementById('colorTexto')
+        const colorFondo = document.getElementById('colorFondo')
+
+        colorTexto.addEventListener('change', () => {
+            texto.style.color = colorTexto.value
+        })
+
+        colorFondo.addEventListener('change', () => {
+            texto.style.backgroundColor = colorFondo.value
+        })
+    </script>
+</body>
+
+</html>

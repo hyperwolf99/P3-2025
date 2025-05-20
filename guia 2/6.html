@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Ejercicio 6</title>
+    <style>
+        .importante {
+            font-weight: bold;
+            background-color: yellow;
+        }
+    </style>
+</head>
+
+<body>
+    <div id='perfilUsuario'>
+    </div>
+
+    <script>
+        const bloque = document.getElementById('perfilUsuario')
+        const nombre = document.createElement('h2')
+        const email = document.createElement('p')
+        const edad = document.createElement('p')
+
+        nombre.innerText = 'Joel Moyano'
+        nombre.style.fontWeight = 'bold'
+
+        email.innerText = 'moyanojoel@gmail.com'
+        email.style.fontStyle = 'italic'
+
+        edad.innerText = '90'
+
+        // bloque.appendChild(nombre)
+        // bloque.appendChild(email)
+        // bloque.appendChild(edad)
+        bloque.append(nombre, email, edad)
+    </script>
+</body>
+
+</html>

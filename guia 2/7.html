@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Ejercicio 7</title>
+</head>
+
+<body>
+    <p id="texto">mensaje</p>
+    <input type="text" id="entrada">
+    <button id="boton">Cambiar texto</button>
+
+    <script>
+        const entrada = document.getElementById('entrada')
+        const boton = document.getElementById('boton')
+        const texto = document.getElementById('texto')
+
+        boton.addEventListener('click', ()=>{
+            texto.innerText = entrada.value
+        })
+    </script>
+</body>
+
+</html>

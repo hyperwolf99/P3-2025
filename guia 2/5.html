@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Ejercicio 5</title>
+    <style>
+        .importante {
+            font-weight: bold;
+            background-color: yellow;
+        }
+    </style>
+</head>
+
+<body>
+    <p class="noticia">Esta es una noticia normal.</p>
+    <p class="alerta">¡Cuidado! Mensaje de alerta.</p>
+    <div class="noticia">Otra noticia aquí.</div>
+    <p class="alerta">Otra alerta importante.</p>
+
+    <script>
+        const alertas = document.getElementsByClassName('alerta')
+
+        for(i=0;i<alertas.length;i++){
+            alertas[i].classList.add('importante')
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Eventos</title>
+</head>
+
+<body>
+    <h1>Titulo</h1>
+    <p id="parrafo">Un texto</p>
+    <button id="saludar">Saludar</button>
+
+    <script>
+        // Accedemos al elemento 'saludar' y 'parrafo'
+        const saludar = document.getElementById('saludar')
+        const parrafo = document.getElementById('parrafo')
+
+        // Funcion que atiende el evento 'click'
+        function handleClick() {
+            //console.log para probar el boton
+            console.log('hola')
+            //Modificamos el texto del elemento P
+            parrafo.innerText = 'hola mundo'
+        }
+
+        // Conectamos al evento 'click' con addEventListener
+        //Primer parametro: evento
+        //Segundo parametro: funcion
+        saludar.addEventListener('click', handleClick)
+
+        // Closures
+        let contador = 0
+        saludar.addEventListener('mouseover', () => {
+            saludar.style.backgroundColor = 'lightGreen';
+            saludar.innerText = 'Presioname ' + contador;
+            contador++
+        })
+
+        saludar.addEventListener('mouseout', () => {
+            saludar.style.backgroundColor = '';
+            saludar.innerText = 'Saludame'
+        })
+    </script>
+    
+</body>
+
+</html>

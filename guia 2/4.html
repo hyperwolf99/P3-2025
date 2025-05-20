@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Ejercicio 4</title>
+</head>
+
+<body>
+    <h3>Lista de Tareas:</h3>
+    <ul>
+        <li>Estudiar JavaScript</li>
+        <li>Hacer la compra</li>
+        <li>Llamar al técnico</li>
+        <li>Leer un capítulo del libro</li>
+    </ul>
+
+    <script>
+        const tareas = document.getElementsByTagName('li')
+
+        for (let i = 0;i<tareas.length;i++){
+            const tarea = tareas[i].innerText
+            tareas[i].innerText = '[HECHO] '+ tarea
+            tareas[i].style.textDecoration = 'line-through'
+        }
+    </script>
+</body>
+
+</html>
