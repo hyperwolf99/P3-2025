@@ -8,7 +8,7 @@
 </head>
 
 <body>
-    <button id="toggleBoton">Mostrar/Ocultar Secreto</button>
+    <button id="toggleBoton">Mostrar Secreto</button>
     <p id="secreto" class="oculto">¡Este es un mensaje secreto!</p>
 
     <script>
@@ -17,6 +17,10 @@
 
         boton.addEventListener('click', () => {
             secreto.classList.toggle('oculto')
+            // Cambia el texto del boton dependiendo de si la 'p' tiene la clase 'oculto'
+            // Si está la clase 'oculto' cambia el texto del botón a 'Mostrar Secreto'
+            // Si no está la clase 'oculto' cambia el texto del botón a 'Ocultar Secreto'
+            boton.innerText = secreto.classList.contains('oculto') ? 'Mostrar Secreto' : 'Ocultar Secreto'
         })
     </script>
 </body>
